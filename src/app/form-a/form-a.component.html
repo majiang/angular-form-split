@@ -1,0 +1,18 @@
+<h3>A</h3>
+<div [formGroup]="form">
+  <h4>One</h4>
+  <div formGroupName="one">
+    <div>
+      <label for="a.one.a">A:</label>
+      <input id="a.one.a" type="text" formControlName="a">
+    </div>
+    <div>
+      <label for="a.one.b">B:</label>
+      <input id="a.one.b" type="text" formControlName="b">
+    </div>
+  </div>
+  <div>
+    <label for="a.two">Two:</label>
+    <input id="a.two" type="text" formControlName="two">
+  </div>
+</div>

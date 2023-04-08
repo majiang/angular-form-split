@@ -1,44 +1,7 @@
-<form [formGroup]="form">
+<form>
   <app-form-basic #basic></app-form-basic>
-  <h3>Common</h3>
-  <div formGroupName="common">
-    <div>
-      <label for="common.one">One:</label>
-      <input id="common.one" type="text" formControlName="one">
-    </div>
-    <div>
-      <label for="common.two">Two:</label>
-      <input id="common.two" type="text" formControlName="two">
-    </div>
-  </div>
-  <h3>A</h3>
-  <div formGroupName="a">
-    <h4>One</h4>
-    <div formGroupName="one">
-      <div>
-        <label for="a.one.a">A:</label>
-        <input id="a.one.a" type="text" formControlName="a">
-      </div>
-      <div>
-        <label for="a.one.b">B:</label>
-        <input id="a.one.b" type="text" formControlName="b">
-      </div>
-    </div>
-    <div>
-      <label for="a.two">Two:</label>
-      <input id="a.two" type="text" formControlName="two">
-    </div>
-  </div>
-  <h3>B</h3>
-  <div formGroupName="b">
-    <div>
-      <label for="b.one">One:</label>
-      <input id="b.one" type="text" formControlName="one">
-    </div>
-    <div>
-      <label for="b.two">Two:</label>
-      <input id="b.two" type="text" formControlName="two">
-    </div>
-  </div>
+  <app-form-common #common></app-form-common>
+  <app-form-a #a></app-form-a>
+  <app-form-b #b></app-form-b>
   <button type="button" (click)="onSubmit()">送信</button>
 </form>
