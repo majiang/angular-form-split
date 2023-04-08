@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms'
+import { FormBasicComponent } from '../form-basic/form-basic.component';
 
 @Component({
   selector: 'app-form',
@@ -7,14 +8,8 @@ import { FormControl, FormGroup } from '@angular/forms'
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
+  @ViewChild('basic') basicComponent!: FormBasicComponent
   form = new FormGroup({
-    basic: new FormGroup({
-      one: new FormGroup({
-        a: new FormControl(""),
-        b: new FormControl(""),
-      }),
-      two: new FormControl(""),
-    }),
     common: new FormGroup({
       one: new FormControl(""),
       two: new FormControl(""),
@@ -34,5 +29,6 @@ export class FormComponent {
   onSubmit() {
     const formData = this.form.value
     console.log(formData)
+    console.log(this.basicComponent.form.value)
   }
 }

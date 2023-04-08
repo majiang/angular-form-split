@@ -1,22 +1,5 @@
 <form [formGroup]="form">
-  <h3>Basic</h3>
-  <div formGroupName="basic">
-    <h4>One</h4>
-    <div formGroupName="one">
-      <div>
-        <label for="basic.one.a">A:</label>
-        <input id="basic.one.a" type="text" formControlName="a">
-      </div>
-      <div>
-        <label for="basic.one.b">B:</label>
-        <input id="basic.one.b" type="text" formControlName="b">
-      </div>
-    </div>
-    <div>
-      <label for="basic.two">Two:</label>
-      <input id="basic.two" type="text" formControlName="two">
-    </div>
-  </div>
+  <app-form-basic #basic></app-form-basic>
   <h3>Common</h3>
   <div formGroupName="common">
     <div>
