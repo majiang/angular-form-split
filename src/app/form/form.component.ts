@@ -31,4 +31,8 @@ export class FormComponent {
       two: new FormControl(""),
     }),
   })
+  onSubmit() {
+    const formData = this.form.value
+    console.log(formData)
+  }
 }
